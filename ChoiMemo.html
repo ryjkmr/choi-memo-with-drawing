@@ -1,0 +1,81 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<title>ちょいメモ</title>
+	<link href="./draw.css" rel="stylesheet">
+	<link href="./main.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<p>
+		<label> <input id="drawing" type="checkbox"> Show/Hide Drawing Area</label>
+	</p>
+	<div id="wrap-draw-area">
+		<button id="black" class="color selected draw">Black</button>
+		<button id="darkgrey" class="color draw">Dark</button>
+		<button id="grey" class="color draw">Gray</button>
+		<button id="lightgrey" class="color draw">Light</button>
+		<button id="white" class="color draw">White</button>
+		<button id="red" class="color draw">Red</button>
+		<button id="orange" class="color draw">Orange</button>
+		<button id="blue" class="color draw">Blue</button>
+		<button id="eraser" class="color draw">ERASER</button>
+		<button id="clear" class="draw">Clear</button>
+		<button id="download" class="draw">Download</button>
+
+		<div class="radio-wrapper">
+			<label class="draw"><input type="radio" id="5px" class="selectLineWidth draw" name="lineWidth" value="5"
+					checked>5px</label>
+			<label class="draw"><input type="radio" id="10px" class="selectLineWidth draw" name="lineWidth"
+					value="10">10px</label>
+			<label class="draw"><input type="radio" id="20px" class="selectLineWidth draw" name="lineWidth"
+					value="20">20px</label>
+			<label class="draw"><input type="radio" id="40px" class="selectLineWidth draw" name="lineWidth"
+					value="40">40px</label>
+		</div>
+		<br>
+
+		<div id="canvas-container"><canvas id="canvas"></canvas></div>
+	</div>
+
+
+	<div contenteditable="false" id="print_div" class="print_only">
+	</div>
+	<div>
+		<p class="screenOnly">
+			<span id="inputlength">0</span>文字（改行込み）<br>
+			<span id="word_count">0</span>ワード<br>
+			文章内の数値の単純合計（平均）：<span id="calc_sum">0</span>(<span id="calc_sum_ava">0</span>)<br>
+			文章内の数値の個数：<span id="calc_howmany">0</span><br>
+			文章内の"＊"をかけ算記号とした合計値（平均）：<span id="calc_multi_sum">0</span> (<span id="calc_multi_sum_ava">0</span>)
+		</p>
+		<p>
+			<button id="removeCRLF" class="screenOnly">remove CR/LF</button>
+			<button id="copy" class="screenOnly">Copy</button>
+		</p>
+
+		<textarea id="reading_text" class="screenOnly"></textarea>
+		<!-- <textarea id="reading_text" class="screenOnly" onkeyup="processText(value);"></textarea> -->
+
+		<p class="screenOnly">　下に入力した式を計算した結果：<span id="calculate_result">0</span> </p>
+		<input type="text" id="calculate_text" class="screenOnly"><br>
+
+		<p class="screenOnly">コードが見やすいエリア</p>
+		<textarea id="coding_text" class="code screenOnly"></textarea>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.2.0/fabric.min.js"></script>
+	<script src="./eval-calculation-1.0.0.js"></script>
+	
+	<script src="./main.js"></script>
+	<script src="./draw.js"></script>
+
+</body>
+
+</html>

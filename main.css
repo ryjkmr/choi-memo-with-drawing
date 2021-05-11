@@ -1,0 +1,86 @@
+		@media screen {
+			.print_only {
+				display: none;
+			}
+			.editor {
+				font-size: 200%;
+				width: 800px;
+				height: 800px;
+				overflow: auto;
+				border: 1px #676767 solid;
+				line-height: 1.3;
+				text-align: justify;
+				margin-left: 20px;
+				margin-bottom: 2em;
+				padding: 20px;
+			}
+			textarea, input[type="text"] {
+				font-size: 200%;
+				width: 800px;
+				height: 800px;
+				border: 1px #676767 solid;
+				line-height: 1.3;
+				text-align: justify;
+				margin-left: 20px;
+				margin-bottom: 2em;
+			}
+			#calculate_text {
+				height: 100px;
+			}
+		}
+
+		.code {
+			font-family: "Courier New", Consolas, monospace;
+			padding: 10px 15px;
+			box-sizing: border-box;
+			display: block;
+			background: #1f1f1f;
+			color: #fafafa;
+			overflow: auto;
+			white-space: pre;
+			line-height: 1.3;
+			font-size: 1.5rem
+		}
+
+		br {
+			line-height: 1.5;
+		}
+
+		p {
+			margin-left: 20px;
+		}
+
+		button {
+			margin-left: 20px;
+		}
+
+		@media print {
+			#inputlength {
+				display: none;
+			}
+			@page {
+				margin: 25mm 25mm 25mm 25mm;
+			}
+			#print_div {
+				font-size: 10pt;
+				height: auto;
+				line-height: 1.3;
+				border: none;
+				text-align: justify;
+			}
+			textarea {
+				font-size: 10pt;
+				width: 80%;
+				margin-left: 10%;
+				margin-top: 50pt;
+				line-height: 1.3;
+				border: none;
+				text-align: justify;
+			}
+			.screenOnly {
+				display: none;
+			}
+			.code {
+				display: none;
+			}
+		}

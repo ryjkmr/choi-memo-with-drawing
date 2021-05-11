@@ -1,0 +1,100 @@
+#wrap-draw-area {
+  margin-left: 20px;
+  display:none;
+}
+
+#canvas-container {
+  border: 5px solid black;
+  width: 1000px;
+}
+
+.radio-wrapper {
+  margin: 10px;
+}
+
+input[type="radio"] {
+  transform: scale(2);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+label {
+  font-size: 150%;
+  position: relative;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+button.draw {
+  font-size: 150%;
+  border: 1px solid black;
+  background-color: #ededed;
+  padding: 5px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.selected {
+  border: 5px solid black;
+}
+
+button.active {
+  background-color: #888;
+}
+
+.color {
+  color: white;
+}
+
+.color1 {
+  background-color: red;
+}
+
+#red {
+  background-color: red;
+}
+
+#green {
+  background-color: green;
+}
+
+#orange {
+  background-color: orange;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#black {
+  background-color: black;
+}
+
+#darkgrey {
+  background-color: rgb(77, 77, 77);
+}
+
+#test{
+  background-color: rgb(134, 42, 255);
+}
+
+#grey {
+  background-color: rgb(105, 105, 105);
+}
+
+#lightgrey {
+  background-color: rgb(167, 167, 167);
+}
+
+#white {
+  background-color: white;
+  color: black;
+}
+
+#eraser {
+  background-color: white;
+  color: black;
+}
