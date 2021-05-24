@@ -1,6 +1,36 @@
+#cursor {
+  --cursor-color-rgb: 0, 0, 0;
+  --cursor-offset: -2.5px;
+  --cursor-size: 5px;
+  transform: translate(0, 0);
+  pointer-events: none;
+  position: fixed;
+  top: var(--cursor-offset);
+  left: var(--cursor-offset);
+  width: var(--cursor-size);
+  height: var(--cursor-size);
+  background: rgb(var(--cursor-color-rgb));
+  border-radius: 50%;
+  z-index: 999;
+  border: 1px solid #606060;
+}
+
+.showDotCursor {
+  opacity: 0.7;
+}
+
+.hideDotCursor {
+  opacity: 0;
+}
+
 #wrap-draw-area {
   margin-left: 20px;
-  display:none;
+  display: none;
+  user-select: none;
+}
+
+#wrap-edit-buttons {
+  margin-top: 10px;
 }
 
 #canvas-container {
@@ -37,11 +67,11 @@ button.draw {
   margin-left: 10px;
 }
 
-.selected {
+button.selected {
   border: 5px solid black;
 }
 
-button.active {
+button:active {
   background-color: #888;
 }
 
@@ -77,7 +107,7 @@ button.active {
   background-color: rgb(77, 77, 77);
 }
 
-#test{
+#test {
   background-color: rgb(134, 42, 255);
 }
 
@@ -97,4 +127,13 @@ button.active {
 #eraser {
   background-color: white;
   color: black;
+}
+
+#editMode {
+  background-color: white;
+  color: black;
+}
+
+.noselect {
+  user-select: none;
 }
