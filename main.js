@@ -54,7 +54,8 @@ document.addEventListener('DOMContentLoaded', function () { //windows.onload„ÅØË
 
 	document.getElementById('calculate_text').addEventListener('change', function (e) {
 		console.log('calc!');
-		const result = evalCalculation(this.value);
+		const temp= this.value.replace(/[^0-9\(\)\*\+\-\/]/g,'');
+		const result = evalCalculation(temp);
 		document.getElementById("calculate_result").innerText = result;
 	});
 
