@@ -52,9 +52,11 @@ document.addEventListener('DOMContentLoaded', function () { //windows.onloadは�
 
 	});
 
+	document.getElementById("replaceBtn").addEventListener("click", replaceTextInTextarea);
+
 	document.getElementById('calculate_text').addEventListener('change', function (e) {
 		console.log('calc!');
-		const temp= this.value.replace(/[^0-9\(\)\*\+\-\/]/g,'');
+		const temp = this.value.replace(/[^0-9\(\)\*\+\-\/]/g, '');
 		const result = evalCalculation(temp);
 		document.getElementById("calculate_result").innerText = result;
 	});
@@ -90,6 +92,17 @@ document.addEventListener('DOMContentLoaded', function () { //windows.onloadは�
 		element.setSelectionRange(pos, pos);
 	}
 
+	//検索置換の関数
+	function replaceTextInTextarea() {
+		let textarea = document.getElementById("reading_text");
+		let searchText = document.getElementById("searchText").value.trim();
+		let replaceText = document.getElementById("replaceText").value.trim();
+		if (searchText === "") {
+			return;
+		}
+		let searchExp = new RegExp(searchText, "g");
+		textarea.value = textarea.value.replace(searchExp, replaceText);
+	}
 
 
 	function processText(str) {
@@ -137,6 +150,5 @@ document.addEventListener('DOMContentLoaded', function () { //windows.onloadは�
 			document.getElementById("calc_howmany").innerText = '0';
 		}
 	}
-
 
 });
